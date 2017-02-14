@@ -32,7 +32,7 @@ function Import-DefaultParameter {
     $TempParameterValues = $Global:PSDefaultParameterValues
     if(Test-Path $Path) {
         [System.Management.Automation.DefaultParameterDictionary]$NewValues = 
-                Import-CliXml -Path ${ProfileDir}\DefaultParameterValues.clixml
+                Import-CliXml -Path $Path
           
         $repeats = @()
         foreach($key in $NewValues.Keys) {
