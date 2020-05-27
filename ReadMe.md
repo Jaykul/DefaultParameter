@@ -3,7 +3,7 @@ This is my DefaultParameter module. I created it primarily to let me store defau
 You can install it from the PowerShell gallery:
 
 ```posh
-Install-Module DefaultParameters
+Install-Module DefaultParameter
 ```
 
 Then you can do something like this:
