@@ -270,7 +270,7 @@ $OldPath = $(Join-Path (Split-Path $Profile.CurrentUserAllHosts -Parent) Default
 if (Test-Path $OldPath) {
     Import-DefaultParameter -Path $OldPath -ErrorVariable Problem
     if (!$Problem) {
-        Write-Warning "One-time import of configuration complete. Please verify `$PSDefaultParameterValues and delete the old file by running: Remove-Item '$OldPath'"
+        Write-Warning "One-time migration of DefaultParameterValues configuration complete. Please verify `$PSDefaultParameterValues and then delete the old file by running: Remove-Item '$OldPath'"
         Export-DefaultParameter
     }
 } else {
